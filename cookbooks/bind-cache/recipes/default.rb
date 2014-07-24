@@ -6,5 +6,5 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-include_recipe 'bind9::install_bind'
-include_recipe 'bind9::config'
+include_recipe 'bind9-ng::install_bind'
+include_recipe 'bind9-ng::config'
