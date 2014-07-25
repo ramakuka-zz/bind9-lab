@@ -24,6 +24,14 @@ case secnario
         :run_list => "role[ns-cache]",
       }
     }
+   when 3
+      machines = {
+        :bindviews => {
+        :hostname => "bindviews.lab1.vagrant",
+        :ipaddress => "33.33.33.14",
+        :run_list => "role[ns-views]",
+      }
+    }
   end
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
@@ -46,7 +54,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         chef.node_name = vm_name
         chef.log_level = :info
         chef.chef_server_url = "http://33.33.33.1:8889/"
-        chef.validation_key_path = "~ram/.chef/validation.pem"
+        chef.validation_key_path = "~/.chef/validation.pem"
         run_list = []
         run_list << ENV['CHEF_RUN_LIST'].split(",") if ENV.has_key?('CHEF_RUN_LIST')
         chef.run_list = [opt[:run_list].split(","), run_list].flatten
