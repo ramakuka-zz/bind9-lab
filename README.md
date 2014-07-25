@@ -2,6 +2,7 @@ bind9 Lab
 =========
 This Lab contains some use cases that can help demonstrate how to use the bind9 cookbook.
 I used it for my development and I figured it can be a nice help for who ever want to try the cookbook, so please clone it fork it and share your findings so we can keep improve it.
+if you just looking for the bind9-ng cookbook it can be cloned from here https://github.com/ramakuka/bind9-ng
 
 How to use this lab
 ===================
